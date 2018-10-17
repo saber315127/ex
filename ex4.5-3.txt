@@ -1,0 +1,8 @@
+maxcount=100;
+tic;
+for j=1:maxcount
+  clear square
+  ii=1:10000;
+  square=ii.^2;
+end
+average4=(toc)/maxcount

@@ -1,0 +1,10 @@
+maxcount=1;
+tic;
+for jj=1:maxcount
+  clear square
+  for ii=1:10000
+    squara(ii)=ii^2;
+    
+  end
+end
+average1=(toc)/maxcount
