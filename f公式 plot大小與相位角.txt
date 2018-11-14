@@ -1,0 +1,10 @@
+t=0:0.1:4;
+f=(1+0.25*j).*t-2;
+amp=abs(f);
+phase=angle(f);
+subplot(2,1,1);
+semilogx(t,amp);
+grid on;
+subplot(2,1,2);
+semilogx(t,phase);
+grid on;
