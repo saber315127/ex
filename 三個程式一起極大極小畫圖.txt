@@ -1,0 +1,43 @@
+function[xmin,ymin,xmax,ymax]=extreme(first,last,num_steps,func)
+msg=nargchk(4,4,nargin);
+error(msg);
+dx=(last-first)/(num_steps-1);
+x=first:dx:last;
+y=feval(func,x);
+[ymax,maxy]=max(y);
+[ymin,miny]=min(y);
+xmax=x(maxy);
+xmin=x(miny);
+
+#程式分隔線
+
+function [y]=f1(x)
+  msg=nargchk(1,1,nargin);
+  error(msg);
+  y=(exp(x)-exp(-x))/2;
+endfunction
+
+#程式分隔線
+
+function [y]=f2(x)
+  msg=nargchk(1,1,nargin);
+  error(msg);
+  y=(exp(x)+exp(-x))/2;
+endfunction
+
+#程式分隔線
+
+function [y]=f3(x)
+  msg=nargchk(1,1,nargin);
+  error(msg);
+  y=(exp(x)-exp(-x))./(exp(x)+exp(-x));
+endfunction
+
+#程式分隔線
+
+x=-2:0.1:2;
+plot(x,f1(x),'b-');
+hold on;
+plot(x,f2(x),'k--');
+hold on;
+plot(x,f3(x),'r.');

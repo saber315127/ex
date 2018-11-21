@@ -1,0 +1,18 @@
+function[xmin,ymin,xmax,ymax]=extreme(first,last,num_steps,func)
+msg=nargchk(4,4,nargin);
+error(msg);
+dx=(last-first)/(num_steps-1);
+x=first:dx:last;
+y=feval(func,x);
+[ymax,maxy]=max(y);
+[ymin,miny]=min(y);
+xmax=x(maxy);
+xmin=x(miny);
+
+plot(x,y);
+axis([first-1 last-1 ymin-1 ymax-1])
+hold on;
+line([xmin xmin],[ymin-1 ymax+1]);
+line([xmax xamx],[ymin-1 ymax+1]);
+line([first-1 xmax],[ymax ymax]);
+line([first-1 xmin],[ymin ymin]);
