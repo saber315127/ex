@@ -1,0 +1,22 @@
+x=0:0.1:2
+y=exp(-x).*sin(x);
+figure(1);
+stem(x,y);
+title('\bfMesh plot of real(\itz\rm\bf),where\it z=e^{x+iy}');
+xlabel('\bfx');
+ylabel('\bfy');
+figure(2);
+stairs(x,y);
+title('\bfMesh plot of real(\itz\rm\bf),where\it z=e^{x+iy}');
+xlabel('\bfx');
+ylabel('\bfy');
+figure(3);
+bar(x,y);
+title('\bfMesh plot of real(\itz\rm\bf),where\it z=e^{x+iy}');
+xlabel('\bfx');
+ylabel('\bfy');
+figure(4);
+compass(x,y);
+title('\bfMesh plot of real(\itz\rm\bf),where\it z=e^{x+iy}');
+xlabel('\bfx');
+ylabel('\bfy');

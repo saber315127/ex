@@ -1,0 +1,11 @@
+function out=caps(str)
+  str=lower(str);
+  str(1)=upper(str(1));
+  n=length(str);
+  for i=2:n
+    if isspace(str(i-1))&isletter(str(i))
+      str(i)=upper(str(i));
+    endif
+  endfor
+  out=str;
+endfunction

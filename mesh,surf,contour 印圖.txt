@@ -1,0 +1,21 @@
+[x,y]=meshgrid(-1:0.05:1,-2*pi:pi/20:2*pi);
+z=exp(x+i*y);
+figure(1);
+mesh(x,y,real(z));
+title('\bfMesh plot of real(\itz\rm\bf),where\it z=e^{x+iy}');
+xlabel('\bfx');
+ylabel('\bfy');
+zlabel('\bfz');
+figure(2);
+surf(x,y,real(z));
+title('\bfSurface plot of real(\it\rm\bf),where \it z=e^{x+iy}');
+xlabel('\bfx');
+ylabel('\bfy');
+zlabel('\bfz');
+figure(3);
+contour(x,y,real(z));
+title('\bfSurface plot of real(\it\rm\bf),where \it z=e^{x+iy}');
+xlabel('\bfx');
+ylabel('\bfy');
+zlabel('\bfz');
+
