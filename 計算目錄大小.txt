@@ -1,0 +1,10 @@
+function bytes=dir_size(dir_name)
+  msg=nargchk(1,1,nargin);
+  error(msg);
+  files=dir(dir_name);
+  bytes=0;
+  for ii=1:length(files)
+    if files(ii).isdir
+      bytes=bytes+files(ii).bytes;
+    endif
+  endfor
